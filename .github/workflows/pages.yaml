@@ -23,6 +23,11 @@ jobs:
         with:
           lfs: true
 
+      - name: Pull LFS files
+        run: |
+          git lfs pull
+          ls -lah assets || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
